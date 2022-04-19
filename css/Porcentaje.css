@@ -1,0 +1,160 @@
+:root {
+    --outer-shadow: 3px 3px 3px #d0d0d0, -3px -3px 3px #f8f8f8;
+    --outer-shadow-0: 0 0 0 #d0d0d0. 0 0 0 #f8f8f8;
+    --inner-shadow: inset 3px 3px 3px #d0d0d0, inset -3px -3px 3px #f8f8f8;
+}
+
+.outer-shadow {
+    box-shadow: var(--outer-shadow);
+}
+
+#porcentaje {
+    margin-top: 100px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card_por {
+    position: relative;
+    height: 400px;
+    width: 280px;
+    text-align: center;
+    z-index: 10;
+    margin: 20px 20px 60px;
+    transition: 0.5s;
+}
+
+.card_por .text_box {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 8px 10px rgba(235, 235, 235, 0.5);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    z-index: 10;
+}
+
+.card_por .text_box .porcentaje {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    z-index: 100;
+}
+
+
+.card_por .text_box .porcentaje .numero {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card_por .text_box .porcentaje .numero h2 {
+    color: #777;
+    font-weight: 700;
+    font-size: 50px;
+    transition: 0.5s;
+}
+
+.card_por:hover .text_box .porcentaje .numero h2 {
+    color: #fff;
+}
+
+.card_por .text_box .porcentaje .numero span {
+    font-size: 25px;
+}
+
+.card_por .text_circle {
+    position: absolute;
+    bottom: -42px;
+    color: white;
+    background: red;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    padding: 30px 20px 10px;
+    border-radius: 10px;
+    font-weight: 800;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    box-shadow: 0 15px 35px rgba(199, 199, 199, 0.411);
+    z-index: 1;
+    pointer-events: none;
+    transition: bottom 0.5s, z-index 0s, transform 0.5s, padding 0.5s;
+    transition-delay: 0.5s, 0.5s, 0s, 0.5s;
+    color: #fff;
+}
+
+
+.card_por:hover .text_circle {
+    transition-delay: 0s, 0.5s, 0.5s, 0s;
+    bottom: -70px;
+    z-index: 11;
+    transform: translateX(-50%) translateY(-50px);
+    padding: 10px 20px 10px;
+}
+
+.card_por:nth-child(1) .text_circle {
+    background: rgb(255, 0, 0);
+}
+
+.card_por:nth-child(2) .text_circle {
+    background: rgb(16, 195, 250);
+}
+
+.card_por:nth-child(3) .text_circle {
+    background: rgb(55, 255, 29);
+}
+
+svg {
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+svg circle {
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke-width: 10;
+    stroke: rgba(255, 255, 255, 0.05);
+    transform: translate(5px, 5px);
+    stroke-linecap: round;
+}
+
+
+svg circle:nth-child(2) {
+
+    stroke-dasharray: 440px;
+    stroke-dashoffset: 440px;
+}
+
+.card_por:nth-child(1) svg circle:nth-child(2) {
+    stroke-dashoffset: calc(440px - (440px * 90) / 100);
+    stroke: rgb(255, 0, 0);
+}
+
+.card_por:nth-child(2) svg circle:nth-child(2) {
+    stroke-dashoffset: calc(440px - (440px * 70) / 100);
+    stroke: rgb(0, 148, 216);
+}
+
+.card_por:nth-child(3) svg circle:nth-child(2) {
+    stroke-dashoffset: calc(440px - (440px * 50) / 100);
+    stroke: rgb(0, 182, 9);
+}
