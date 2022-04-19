@@ -1,3 +1,3 @@
 #                     Portafolio-Web 
 
-<img src="Captura.PNG" alt="">
+<img src="Captura.png" alt="">
